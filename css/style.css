@@ -1,0 +1,217 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.firstpage {
+  background-image: url("/img/index.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+.bass {
+  background-image: url("/img/bass.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+.guitar {
+  background-image: url("/img/guitar.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+.piano {
+  background-image: url("/img/piano.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+.drums {
+  background-image: url("/img/drums.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 87vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  border: .4rem solid #525669;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 .5rem black;
+}
+
+/* --- KEYS OTHER PAGES ---*/
+
+.keys1 {
+  display: flex;
+  flex: 1;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+#key1 {
+  border: .4rem solid #525669;
+  border-radius: .4rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 .5rem black;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #888eab;
+  box-shadow: 0 0 1rem #e8e8e8;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #b5ab88;
+}
+
+/* --- CUSTOM CSS --- */
+
+/* --- NAV PAGE --- */
+
+.navbar {
+  background-color: #4c343757;
+  font-family: 'IM Fell English SC', serif;
+}
+
+.navbar ul li a {
+  color: #e8e8e8;
+}
+
+.navbar ul li a:hover {
+  color: #f3bd6c;
+}
+
+a.nav-link.active {
+  color: #f3bd6c;
+}
+
+.navbar-brand {
+  text-align: center font-size: 1.50rem;
+  color: #e8e8e8;
+}
+
+.navbar-brand:hover {
+  color: #c07339;
+}
+
+/* --- TEST ROCK STAR--- */
+
+#rock {
+  text-align: center;
+  font-family: 'Metal Mania';
+  margin-top: 0em;
+}
+
+#rock h1 {
+  font-size: 5em;
+  margin-top: .5em;
+  color: #fbfff2;
+}
+
+#star {
+  text-align: center;
+  font-family: 'Metal Mania';
+  margin-top: 4em;
+}
+
+#star h1 {
+  font-size: 10em;
+  color: #fbfff2;
+  
+}
+
+.hand {
+  height: auto;
+  width: 100%;
+}
+
+/* --- DRUMS PAGE --- */
+
+#drums {
+  background-image: url("img/drums.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+/* --- FOOTER --- */
+
+footer {
+  background-color: #4c343757;
+  font-family: 'IM Fell English SC', serif;
+}
+
+footer p {
+  margin: 0;
+  padding: .3em;
+  text-align: center;
+  color: #e8e8e8;
+}
+
+footer a {
+  color: #e8e8e8;
+}
+
+footer a:hover {
+  color: #f3bd6c;
+  text-decoration: none;
+}
+

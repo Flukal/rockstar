@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rock * Star</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Metal+Mania|New+Rocker|IM+Fell+English+SC" rel="stylesheet">
+    
+</head>
+
+<body class="piano">
+
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">
+            <img src="/img/rock-and-roll.svg" width="35" height="35" class="d-inline-block align-top">Rock Star
+        </a>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home
+
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="guitar.html">Guitar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="bass.html">Bass</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="piano.html">Piano</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="drums.html">Drums</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="keys1" id="notetop">
+            <div data-key="87" class="key" id="key1">
+                <kbd>W</kbd>
+                <span class="sound">C#</C>
+                </span>
+            </div>
+            <div data-key="69" class="key" id="key1" id="dnote">
+                <kbd>E</kbd>
+                <span class="sound">D#</span>
+            </div>
+            <div data-key="84" class="key" id="key1">
+                <kbd>T</kbd>
+                <span class="sound">F#</span>
+            </div>
+            <div data-key="89" class="key" id="key1">
+                <kbd>Y</kbd>
+                <span class="sound">G#</span>
+            </div>
+            <div data-key="85" class="key" id="key1">
+                <kbd>U</kbd>
+                <span class="sound">A#</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="keys1">
+            <div data-key="65" class="key" id="key1">
+                <kbd>A</kbd>
+                <span class="sound">C</span>
+            </div>
+            <div data-key="83" class="key" id="key1">
+                <kbd>S</kbd>
+                <span class="sound">D</span>
+            </div>
+            <div data-key="68" class="key" id="key1">
+                <kbd>D</kbd>
+                <span class="sound">E</span>
+            </div>
+            <div data-key="70" class="key" id="key1">
+                <kbd>F</kbd>
+                <span class="sound">F</span>
+            </div>
+            <div data-key="71" class="key" id="key1">
+                <kbd>G</kbd>
+                <span class="sound">G</span>
+            </div>
+            <div data-key="72" class="key" id="key1">
+                <kbd>H</kbd>
+                <span class="sound">A</span>
+            </div>
+            <div data-key="74" class="key" id="key1">
+                <kbd>J</kbd>
+                <span class="sound">B</span>
+            </div>
+            <div data-key="75" class="key" id="key1">
+                <kbd>K</kbd>
+                <span class="sound">C</span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mastfoot mt-auto fixed-bottom">
+        <div class="inner">
+            <p>Flukal -
+                <a href="https://github.com/Flukal">Github</a>
+            </p>
+        </div>
+    </footer>
+
+
+    <audio data-key="65" src="/sounds/piano/PianoC2.wav"></audio>
+    <audio data-key="87" src="/sounds/piano/PianoC1.wav"></audio>
+    <audio data-key="83" src="/sounds/piano/PianoD.wav"></audio>
+    <audio data-key="69" src="/sounds/piano/PianoD1.wav"></audio>
+    <audio data-key="68" src="/sounds/piano/PianoE.wav"></audio>
+    <audio data-key="70" src="/sounds/piano/PianoF.wav"></audio>
+    <audio data-key="84" src="/sounds/piano/PianoF1.wav"></audio>
+    <audio data-key="71" src="/sounds/piano/PianoG.wav"></audio>
+    <audio data-key="89" src="/sounds/piano/PianoG1.wav"></audio>
+    <audio data-key="72" src="/sounds/piano/PianoA.wav"></audio>
+    <audio data-key="85" src="/sounds/piano/PianoA1.wav"></audio>
+    <audio data-key="74" src="/sounds/piano/PianoB.wav"></audio>
+    <audio data-key="75" src="/sounds/piano/PianoC3.wav"></audio>
+
+    <script>
+        function removeTransition(e) {
+            if (e.propertyName !== 'transform') return;
+            e.target.classList.remove('playing');
+        }
+
+        function playsound(e) {
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+            if (!audio) return;
+
+            key.classList.add(`playing`);
+            audio.currentTime = 0;
+            audio.play();
+        }
+
+        const keys = Array.from(document.querySelectorAll('.key'));
+        keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+        window.addEventListener('keydown', playsound);
+    </script>
+
+</body>
+
+</html>
