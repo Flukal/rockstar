@@ -25,7 +25,7 @@ html {
 }
 
 .guitar {
-  background-image: url("../guitar.jpg");
+  background-image: url("../img/guitar.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -35,7 +35,7 @@ html {
 }
 
 .piano {
-  background-image: url("/img/piano.jpg");
+  background-image: url("../img/piano.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -45,7 +45,7 @@ html {
 }
 
 .drums {
-  background-image: url("/img/drums.jpg");
+  background-image: url("../img/drums.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -183,7 +183,7 @@ a.nav-link.active {
 /* --- DRUMS PAGE --- */
 
 #drums {
-  background-image: url("img/drums.jpg");
+  background-image: url("../img/drums.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
